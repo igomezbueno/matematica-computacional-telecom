@@ -1,0 +1,6 @@
+# Ficheros generados al ejecutar las recetas
+*.png
+*.txt
+octave-workspace
+*~
+.DS_Store
