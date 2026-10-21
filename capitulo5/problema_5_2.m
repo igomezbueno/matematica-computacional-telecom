@@ -26,11 +26,11 @@ h=ws(:,1).^2+ws(:,2);
 
 global tabla;
 tabla=[ts h.*normup];
-simpcomp('tabfun',0,5,25)
+simpcomp('tabfun',0,5,50)
 
 Fx=ws(:,1)+ws(:,2);
 Fy=ws(:,1)-ws(:,2);
 
 intg=Fx.*xp+Fy.*yp;
 tabla=[ts intg];
-simpcomp('tabfun',0,5,25)
+simpcomp('tabfun',0,5,50)

@@ -52,7 +52,7 @@ function [z,err,k,r] = newton_sistemas(Ffun,Jfun,x0,n,TOL)
     x = x + dx;
   end
 
-  if isnan(x) | isinf(x)
+  if any(isnan(x) | isinf(x))
     err = 1;
   else
     err = 0;

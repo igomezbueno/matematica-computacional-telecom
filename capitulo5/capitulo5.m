@@ -158,7 +158,7 @@ t = [t1 t2];
 rho = sqrt(cos(2*t));
 xl = rho.*cos(t);
 yl = rho.*sin(t);
-figure(5); plot(xl,yl); axis equal; grid on; title('Lemniscata de Bernouilli');
+figure(5); plot(xl,yl); axis equal; grid on; title('Lemniscata de Bernoulli');
 
 % Caracol de Pascal
 t = linspace(0,2*pi,400);
@@ -310,7 +310,7 @@ grid on
 hold off
 
 % Estimacion de la señal en puntos no medidos
-polyval(p,0.5), polyval(p,8)
+polyval(p,0.5), polyval(p,7)
 
 
 disp('--------------------')

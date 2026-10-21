@@ -277,10 +277,6 @@ mu = [12;6];
 Sigma = [3 0.5; 0.5 2];
 x = mvnrnd(mu',Sigma,N); %puntos no uniformes
 
-disp('--------------------------------------------------')
-disp(' Apartado b): Proporcion de usuarios cubiertos por al menos una antena')
-disp('--------------------------------------------------')
-
 %--------------------------------------------------
 % Filtrado: nos quedamos solo con los puntos en R
 %--------------------------------------------------
@@ -288,6 +284,10 @@ R = (x(:,1)>=0).*(x(:,1)<=20).*(x(:,2)>=0).*(x(:,2)<=10);
 %R es 0 si alguna de esas condiciones no se cumple, y es 1 si todas se cumplen
 
 Nr = sum(R>0); %numero de señales que han caido en el rectangulo R
+
+disp('--------------------------------------------------')
+disp(' Apartado b): Proporcion de usuarios cubiertos por al menos una antena')
+disp('--------------------------------------------------')
 
 
 % Cobertura (igual que antes)
@@ -314,7 +314,7 @@ zc=norminv(1-rho,0,1);
 Ip = [p - zc*sqrt(p*q/Nr), p + zc*sqrt(p*q/Nr)]
 
 disp('--------------------------------------------------')
-disp(' Apartado b): Numero de usuarios cubiertos por al menos una antena')
+disp(' Apartado c): Numero de usuarios cubiertos por al menos una antena')
 disp('--------------------------------------------------')
 Pobl = 25000*p %personas cubiertas
 Ipobl = 25000*Ip

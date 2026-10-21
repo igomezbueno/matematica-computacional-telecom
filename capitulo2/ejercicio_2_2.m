@@ -77,7 +77,7 @@ function [z,err,k,r] = newton_sistemas(Ffun,Jfun,x0,n,TOL)
     x = x + dx;
   end
 
-  if isnan(x) | isinf(x)
+  if any(isnan(x) | isinf(x))
     err = 1;
   else
     err = 0;
@@ -104,7 +104,7 @@ eig(hesxf) %calculamos los autovalores de la Hessiana en xf para ver si es defin
 det(hesxf(1:1,1:1)) %determinante de la submatriz principal sucesiva de orden 1
 det(hesxf(1:2,1:2)) %determinante de la submatriz principal sucesiva de orden 2
 %Hemos comprobado que no se cumple la condicion de minimalidad , por lo que no podemos asegurar que xf sea un minimo local
-%tenemos que alanizar los valores del campo escalar
+%tenemos que analizar los valores del campo escalar
 
 disp('Apartado b)')
 syms x y real %definimos variables simbolicas x y

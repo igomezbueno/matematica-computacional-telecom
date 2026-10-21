@@ -30,7 +30,7 @@ efeu=ws(:,1).^2+ws(:,2).^2;
 global tabla;
 format long;
 tabla=[ts efeu.*normup];
-simpcomp('tabfun',0,5,25)
+simpcomp('tabfun',0,5,50)
 
 disp('Apartado b')
 
@@ -40,4 +40,4 @@ Fy=ws(:,1)-sin(ws(:,2));
 intgnds=Fx.*xp+Fy.*yp;
 
 tabla=[ts intgnds];
-simpcomp('tabfun',0,5,25)
+simpcomp('tabfun',0,5,50)

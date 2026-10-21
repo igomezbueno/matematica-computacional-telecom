@@ -25,16 +25,30 @@ a = diff(Li);
 % Alturas del histograma
 h = n./a;
 
+disp('-----------')
+disp('Apartado b)')
+disp('-----------')
+
 % Gráfica del histograma
-figure(1)
-bar(Li(1:end-1), h, 'histc');
+function barhistc(limits,heights)
+    % (by Pablo Guerrero-Garcia <pablito@ctima.uma.es>, May 2025)
+    % (   Dept. Applied Mathematics, University of Malaga, Spain)
+    % Version adaptada: recibe todos los extremos de las clases (n+1 valores)
+    widths = diff(limits); figure, hold on
+    for currect=[limits(1:end-1);zeros(size(heights));widths;heights]
+        rectangle('Position',currect','FaceColor',[0 0.5 0.5]);
+    end; xticks(limits)
+    axis([limits(1) limits(end) 0 min(heights)/2+max(heights)]), hold off
+endfunction
+
+barhistc(Li,h);
 
 
 % Frecuencias absolutas acumuladas
 nac = cumsum(n)
 
 disp('-----------')
-disp('Apartado b)')
+disp('Apartado a)')
 disp('-----------')
 
 N = sum(n);
@@ -45,13 +59,6 @@ media = sum(n.*x)/N
 m2 = sum(n.*x.^2)/N;
 varianza = m2 - media^2
 
-% Moda
-[val, ind] = max(h);
-h1 = h(ind) - h(ind-1);
-h2 = h(ind) - h(ind+1);
-Mo = Li(ind)+a(ind)*(h1/(h1+h2));
-Mo
-
 % Mediana
 n2 = N / 2;
 ind = find(n2 < nac, 1); % Encuentra el primer índice donde n2 < nac
@@ -61,6 +68,13 @@ Me
 disp('-----------')
 disp('Apartado c)')
 disp('-----------')
+
+% Moda
+[val, ind] = max(h);
+h1 = h(ind) - h(ind-1);
+h2 = h(ind) - h(ind+1);
+Mo = Li(ind)+a(ind)*(h1/(h1+h2));
+Mo
 
 % Curtosis
 m3 = sum(n.*x.^3)/N;

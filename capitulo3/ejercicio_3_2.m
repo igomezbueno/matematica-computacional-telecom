@@ -50,6 +50,9 @@ yy=polyval(p, xx);
 %Grafica
 plot(x,y,'ro',xx,yy,'b-'), grid on;
 
+disp('-----------')
+disp('Apartado c)')
+disp('-----------')
 
 disp('Ajuste de una parabola')
 p2 = polyfit(x,y,2)

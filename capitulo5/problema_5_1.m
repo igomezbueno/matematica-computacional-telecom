@@ -28,10 +28,10 @@ efeu = 2*ws(:,1)+ws(:,2).^2;
 global tabla;
 format long;
 tabla = [ts efeu.*normup];
-simpcomp('tabfun',0,5,25)
+simpcomp('tabfun',0,5,50)
 
 disp('Apartado b')
 eFeu = [ws(:,1)-ws(:,2), ws(:,1)+cos(ws(:,2))];
 intgnds = sum(eFeu.*[xp yp],2);
 tabla = [ts intgnds];
-simpcomp('tabfun',0,5,25)
+simpcomp('tabfun',0,5,50)

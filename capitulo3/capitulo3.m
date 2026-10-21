@@ -105,6 +105,10 @@ curtY  = kurtosis(Y) - 3; %Curtosis
 
 mediaY, varY, sY, sesgoY, curtY
 
+DMY = mean(abs(Y-mediaY)); %Desviacion media respecto a la media
+MCY = sqrt(mean((Y-mediaY).^2)); %Media cuadratica de las desviaciones a la media
+DMY, MCY
+
 %-----------------------------
 % (B) Agrupacion en 7 clases + histograma por densidades
 %-----------------------------
@@ -286,9 +290,9 @@ bw=pw(2)
 Zw=aw+bw*X_cal; %O bien polyval([bw aw],X_cal)
 ew=Z-Zw;
 
-SSEw=sum(w.*(ew.^2)); %SSE con pesos
+SSEw=sum(ew.^2); %SSE sin ponderar de la recta con pesos
 
-disp('Comparacion de SSE sin y con pesos:')
+disp('Comparacion de la SSE (sin ponderar) de la recta sin pesos y de la recta con pesos:')
 SSEL, SSEw
 
 %Dibujamos en la misma grafica la recta del ajuste con pesos en verde

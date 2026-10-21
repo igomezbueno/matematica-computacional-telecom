@@ -54,5 +54,5 @@ v100=v(101,:);
 Freq100=[sum(v100==1) sum(v100==2) sum(v100==3) sum(v100==4) sum(v100==5)]/NTARS
 
 % Mostrar evolucion de tareas cada 2 instantes para algunas muestras
-disp('Estados de tareas 1, 1001, 2001, ..., 10001 cada 2 instantes:');
+disp('Estados de tareas 1, 1001, 2001, ..., 9001 cada 2 instantes:');
 v(1:2:end, 1:1000:NTARS)

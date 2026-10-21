@@ -37,7 +37,7 @@ function barhistc(limits,heights)
     axis([limits(1) limits(end) 0 min(heights)/2+max(heights)]), hold off
 endfunction
 
-disp('Grafica del histograma normalizado')
+disp('Grafica del histograma sin normalizar')
 
 barhistc(Li,h), hold on;
 %plot(x,h); %Descomentar si quiero el poligono de frecuencias

@@ -88,7 +88,7 @@ function [z,err,k,r] = newton_sistemas(Ffun,Jfun,x0,n,TOL)
     x = x + dx;
   end
 
-  if isnan(x) | isinf(x)
+  if any(isnan(x) | isinf(x))
     err = 1;
   else
     err = 0;
@@ -152,10 +152,10 @@ legend('Curvas de nivel','Punto de funcionamiento');
 
 % Superficie con curvas de nivel
 figure();
-meshc(xm,ym,Em); %dibujamos una supercifie 3D tipo malla de la funcion dada por Em sobre la rejilla definida por xm e ym
+meshc(xm,ym,Em); %dibujamos una superficie 3D tipo malla de la funcion dada por Em sobre la rejilla definida por xm e ym
 %meshc tambien añade las curvas de nivel proyectadas en el plano inferior
 hold on;
-plot3(x_sol(1),x_sol(2),E(x_sol),'ro'); %marcamos con un ciruclo rojo en la gráfica 3D el punto de funcionamiento hallado por Newton
+plot3(x_sol(1),x_sol(2),E(x_sol),'ro'); %marcamos con un circulo rojo en la gráfica 3D el punto de funcionamiento hallado por Newton
 %Las coordenadas del punto de funcionamiento son (x_sol(1), x_sol(2)) en el plano y altura E(x_sol); 
 xlabel('x'); ylabel('y'); zlabel('E');
 title('Superficie de energia y punto de funcionamiento');
@@ -221,7 +221,7 @@ p_DI_2 = M2\b
 p_PS_2 = pinv(M2)*b
 p_QR_2 = solqr(M2,b)
 
-norm(b-M2*p_PS_2) %si la matriz no tiene rango completo por comlumnas, la pseudoinversa da la solucion de minima norma
+norm(b-M2*p_PS_2) %si la matriz no tiene rango completo por columnas, la pseudoinversa da la solucion de minima norma
 cond(M2)
 
 %% ---------------------------------------------------
