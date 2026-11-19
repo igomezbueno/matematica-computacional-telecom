@@ -1,7 +1,7 @@
 %=====================================================================
 % CAPITULO 4. MODELOS PROBABILISTICOS, SIMULACION Y CADENAS DE MARKOV EN TELECOMUNICACIONES
 % Matematica computacional para telecomunicaciones.
-% Un enfoque practico con Octave y MATLAB.
+% Un enfoque practico con Octave y Matlab.
 % Irene Gomez Bueno y Pablo Guerrero Garcia.
 %
 % Ejecutar desde esta carpeta tras haber ejecutado iniciar.m en la raiz

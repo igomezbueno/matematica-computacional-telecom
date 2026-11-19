@@ -1,7 +1,7 @@
 %=====================================================================
 % INICIAR: prepara Octave para ejecutar las recetas del libro
 % Matematica computacional para telecomunicaciones.
-% Un enfoque practico con Octave y MATLAB.
+% Un enfoque practico con Octave y Matlab.
 % Irene Gomez Bueno y Pablo Guerrero Garcia.
 %
 % Ejecutar una vez al comienzo de cada sesion desde la carpeta raiz

@@ -1,6 +1,6 @@
 # Matemática computacional para telecomunicaciones
 
-**Un enfoque práctico con Octave y MATLAB**
+**Un enfoque práctico con Octave y Matlab**
 
 Material complementario del libro de **Irene Gómez Bueno** y **Pablo Guerrero García** (Departamento de Matemática Aplicada, Universidad de Málaga).
 
@@ -63,9 +63,9 @@ Si la última versión de `statistics` pide una versión de Octave más reciente
 
 Muchas recetas usan números aleatorios (ruido, método de Montecarlo, simulación de cadenas de Markov), así que los valores obtenidos cambian ligeramente en cada ejecución.
 
-## Uso con MATLAB
+## Uso con Matlab
 
-La mayor parte del código funciona también en MATLAB con cambios mínimos:
+La mayor parte del código funciona también en Matlab con cambios mínimos:
 
 - sustituir `endfunction` por `end`;
 - colocar las funciones locales al final de la receta;
@@ -79,4 +79,4 @@ Todo el material se distribuye bajo la licencia MIT (véase [LICENSE](LICENSE)).
 
 Si utilizas este material, cita el libro:
 
-> Gómez Bueno, I. y Guerrero García, P. *Matemática computacional para telecomunicaciones. Un enfoque práctico con Octave y MATLAB*. 2026.
+> Gómez Bueno, I. y Guerrero García, P. *Matemática computacional para telecomunicaciones. Un enfoque práctico con Octave y Matlab*. 2026.
